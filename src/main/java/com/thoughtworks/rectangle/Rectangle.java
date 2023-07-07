@@ -2,32 +2,20 @@ package com.thoughtworks.rectangle;
 
 public class Rectangle {
 
-    int length;
-    int breadth;
+    private final double length;
+    private final double breadth;
 
-    public Rectangle(int length, int breadth) {
+    public Rectangle(double length, double breadth) {
         this.length = length;
         this.breadth = breadth;
     }
 
-    public int calculateArea() {
+    public double area() {
         return this.length * this.breadth;
     }
 
-    public int getLength() {
-        return length;
-    }
-
-    public void setLength(int length) {
-        this.length = length;
-    }
-
-    public int getBreadth() {
-        return breadth;
-    }
-
-    public void setBreadth(int breadth) {
-        this.breadth = breadth;
+    public double perimeter() {
+        return 2 * (breadth + length);
     }
 
 }
